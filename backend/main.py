@@ -1,7 +1,6 @@
 from fastapi import FastAPI
-from database import SessionLocal, engine
+from database import engine
 from models import Base, FilmSubmission, Registration
-from schemas import FilmCreate, RegisterCreate
 
 app = FastAPI(title="NFF API")
 Base.metadata.create_all(bind=engine)
