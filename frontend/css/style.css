@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #ffecd2, #fcb69f);
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #ff6f61;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 48px;
+  animation: fadeIn 2s ease-in;
+}
+
+.hero button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background: #ff6f61;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.floating-icons .icon {
+  position: absolute;
+  font-size: 40px;
+  animation: float 6s infinite ease-in-out;
+}
+
+.floating-icons .icon:nth-child(1) { left: 10%; top: 70%; }
+.floating-icons .icon:nth-child(2) { left: 50%; top: 80%; }
+.floating-icons .icon:nth-child(3) { left: 80%; top: 65%; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
