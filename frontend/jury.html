@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About – NCFF</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Jury | NCFF</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<img src="images/ui/top-left.png" class="ui tl">
-<img src="images/ui/top-right.png" class="ui tr">
-<img src="images/ui/bottom-left.png" class="ui bl">
-<img src="images/ui/bottom-right.png" class="ui br">
-<img src="images/ui/side-left.png" class="ui sl">
-<img src="images/ui/side-right.png" class="ui sr">
 
-<header>
-  <div class="navbar">
-    <div class="logo">NCFF</div>
-    <nav>
+<header class="header">
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="images/logo-placeholder.png" alt="NCFF Logo">
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
+
+    <nav class="nav" id="navMenu">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about-festival.html">About Festival</a>
+      <a href="about-nff.html">About NFF</a>
+      <a href="about-foundation.html">About Foundation</a>
       <a href="submissions.html">Submit Film</a>
       <a href="schedule.html">Schedule</a>
       <a href="jury.html">Jury</a>
@@ -29,17 +32,28 @@
   </div>
 </header>
 
-<main class="main">
-  <h2>Festival Jury</h2>
+
+
+<section class="section bg-blue">
+<div class="container">
+<h2 class="center">Festival Jury</h2>
+
+
+<div class="card-grid">
+<div class="card"><img src="images/placeholder-card.png"><h3>Jury Name</h3><p>Filmmaker</p></div>
+<div class="card"><img src="images/placeholder-card.png"><h3>Jury Name</h3><p>Educator</p></div>
+</div>
+
+
+<h2>Thoughts from the Jury</h2>
 <p>
-The NCFF jury comprises filmmakers, educators, and creative professionals who
-bring diverse perspectives and deep sensitivity towards children’s storytelling
-and cinema.
+“Children’s cinema shapes future generations. Festivals like NCFF nurture
+creativity, empathy, and cultural consciousness.”
 </p>
+</div>
+</section>
 
-</main>
 
-<footer>© NCFF</footer>
-
+<script src="js/main.js"></script>
 </body>
 </html>

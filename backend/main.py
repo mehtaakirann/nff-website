@@ -1,39 +1,59 @@
 from fastapi import FastAPI
-from database import engine, SessionLocal
-from models import Base, FilmSubmission, Registration
-from schemas import FilmCreate, RegisterCreate
+from fastapi.middleware.cors import CORSMiddleware
+from schemas import FilmSubmission, SponsorInterest, ContactMessage
+from email_service import send_email
 
-app = FastAPI(title="NFF API")
+app = FastAPI(title="NCFF API")
 
-Base.metadata.create_all(bind=engine)
+# CORS (frontend → backend)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],   # later restrict domain
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+@app.get("/")
+def home():
+    return {"status": "NCFF backend running"}
 
 
 @app.post("/submit-film")
-def submit_film(film: FilmCreate):
-    db = SessionLocal()
-    new_film = FilmSubmission(
-        title=film.title,
-        director=film.director,
-        age_group=film.age_group,
-        link=film.link
+def submit_film(data: FilmSubmission):
+    send_email(
+        "New Film Submission",
+        f"""
+        Title: {data.title}
+        Director: {data.director}
+        Age Group: {data.age_group}
+        Link: {data.link}
+        """
     )
-    db.add(new_film)
-    db.commit()
-    db.refresh(new_film)
-    db.close()
-    return {"status": "Film saved successfully"}
+    return {"message": "Film submitted successfully"}
 
 
-@app.post("/register")
-def register_user(user: RegisterCreate):
-    db = SessionLocal()
-    new_user = Registration(
-        name=user.name,
-        email=user.email,
-        role=user.role
+@app.post("/sponsor-interest")
+def sponsor_interest(data: SponsorInterest):
+    send_email(
+        "New Sponsor Interest",
+        f"""
+        Name: {data.name}
+        Email: {data.email}
+        Message: {data.message}
+        """
     )
-    db.add(new_user)
-    db.commit()
-    db.refresh(new_user)
-    db.close()
-    return {"status": "User registered successfully"}
+    return {"message": "Sponsor interest received"}
+
+
+@app.post("/contact")
+def contact(data: ContactMessage):
+    send_email(
+        "New Contact Message",
+        f"""
+        Name: {data.name}
+        Email: {data.email}
+        Message: {data.message}
+        """
+    )
+    return {"message": "Thank you for contacting us"}

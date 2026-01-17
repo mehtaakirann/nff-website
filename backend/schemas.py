@@ -1,14 +1,20 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 
-class FilmCreate(BaseModel):
+class FilmSubmission(BaseModel):
     title: str
     director: str
     age_group: str
     link: str
 
 
-class RegisterCreate(BaseModel):
+class SponsorInterest(BaseModel):
     name: str
-    email: str
-    role: str
+    email: EmailStr
+    message: str | None = None
+
+
+class ContactMessage(BaseModel):
+    name: str
+    email: EmailStr
+    message: str

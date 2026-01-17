@@ -1,197 +1,197 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #ffffff;
-    color: #222;
-    line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
 }
 
 /* Containers */
 .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
 }
 
 /* Header */
 .header {
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .logo img {
-    height: 45px;
+  height: 45px;
 }
 
 .nav a {
-    margin-left: 18px;
-    text-decoration: none;
-    color: #222;
-    font-weight: 500;
+  margin-left: 18px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
 }
 
 .nav a.active {
-    border-bottom: 3px solid #a6d74f;
+  border-bottom: 3px solid #a6d74f;
 }
 
 /* Hero */
 .hero {
-    text-align: center;
-    padding: 90px 20px;
+  text-align: center;
+  padding: 90px 20px;
 }
 
 .hero h1 {
-    font-size: 42px;
+  font-size: 42px;
 }
 
 .tagline {
-    background: #b7dd57;
-    padding: 8px 18px;
-    border-radius: 8px;
-    display: inline-block;
-    margin: 20px 0;
-    font-weight: 600;
+  background: #b7dd57;
+  padding: 8px 18px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 20px 0;
+  font-weight: 600;
 }
 
 /* Sections */
 .section {
-    padding: 0;
+  padding: 0;
 }
 
 .bg-yellow {
-    background: #fff4cc;
+  background: #fff4cc;
 }
 
 .bg-blue {
-    background: #e7f4fb;
+  background: #e7f4fb;
 }
 
 .bg-green {
-    background: #eaf7ea;
+  background: #eaf7ea;
 }
 
 .bg-pink {
-    background: #fff0f5;
+  background: #fff0f5;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 /* Split layout */
 .split {
-    display: flex;
-    gap: 40px;
-    align-items: center;
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
 .split .text {
-    flex: 1;
+  flex: 1;
 }
 
 .image-box {
-    flex: 1;
-    height: 220px;
-    border: 2px dashed #bbb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #777;
-    background: #fff;
+  flex: 1;
+  height: 220px;
+  border: 2px dashed #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  background: #fff;
 }
 
 /* Highlights */
 .highlight-list {
-    list-style: none;
-    margin-top: 20px;
+  list-style: none;
+  margin-top: 20px;
 }
 
 .highlight-list li {
-    margin-bottom: 12px;
-    font-size: 17px;
+  margin-bottom: 12px;
+  font-size: 17px;
 }
 
 /* Buttons */
 .btn {
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    margin: 10px;
-    display: inline-block;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  margin: 10px;
+  display: inline-block;
 }
 
 .primary {
-    background: #a6d74f;
-    color: #000;
+  background: #a6d74f;
+  color: #000;
 }
 
 .secondary {
-    background: #222;
-    color: #fff;
+  background: #222;
+  color: #fff;
 }
 
 /* Footer */
 .footer {
-    text-align: center;
-    padding: 30px;
-    background: #fff;
-    border-top: 1px solid #eee;
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  border-top: 1px solid #eee;
 }
 
 /* UI doodles */
 .ui {
-    position: fixed;
-    width: 120px;
-    z-index: -1;
+  position: fixed;
+  width: 120px;
+  z-index: -1;
 }
 
 .tl {
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
 }
 
 .tr {
-    top: 0;
-    right: 0;
+  top: 0;
+  right: 0;
 }
 
 .bl {
-    bottom: 0;
-    left: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .br {
-    bottom: 0;
-    right: 0;
+  bottom: 0;
+  right: 0;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .split {
-        flex-direction: column;
-    }
+  .split {
+    flex-direction: column;
+  }
 
-    .nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /* Card grid */

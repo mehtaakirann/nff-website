@@ -1,48 +1,55 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About – NCFF</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Submit Film | NCFF</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-  <img src="images/ui/top-left.png" class="ui tl">
-  <img src="images/ui/top-right.png" class="ui tr">
-  <img src="images/ui/bottom-left.png" class="ui bl">
-  <img src="images/ui/bottom-right.png" class="ui br">
-  <img src="images/ui/side-left.png" class="ui sl">
-  <img src="images/ui/side-right.png" class="ui sr">
 
-  <header>
-    <div class="navbar">
-      <div class="logo">NCFF</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="submissions.html">Submit Film</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="jury.html">Jury</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+<header class="header">
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="images/logo-placeholder.png" alt="NCFF Logo">
     </div>
-  </header>
 
-  <main class="main">
-    <h2>Film Submissions</h2>
-<p>
-NCFF invites filmmakers to submit films made for children and young audiences.
-Selected films will be showcased during the festival across various age-based
-and thematic categories.
-</p>
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
 
-  </main>
+    <nav class="nav" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about-festival.html">About Festival</a>
+      <a href="about-nff.html">About NFF</a>
+      <a href="about-foundation.html">About Foundation</a>
+      <a href="submissions.html">Submit Film</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="jury.html">Jury</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <footer>© NCFF</footer>
 
+
+<section class="section bg-green">
+<div class="container">
+<h2 class="center">Film Submission</h2>
+
+
+<form id="filmForm" class="form">
+<input name="title" placeholder="Film Title" required>
+<input name="director" placeholder="Director Name" required>
+<input name="age_group" placeholder="Age Group" required>
+<input name="link" placeholder="Film Link / URL" required>
+<button type="submit">Submit Film</button>
+</form>
+</div>
+</section>
+
+
+<script src="js/main.js"></script>
 </body>
-
 </html>
