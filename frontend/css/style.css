@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(120deg, #ffecd2, #fcb69f);
-  overflow-x: hidden;
+  font-family: "Comic Neue", "Segoe UI", sans-serif;
+  background: #fff7e6;
 }
 
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -15,51 +15,68 @@ body {
 
 .navbar a {
   color: white;
-  margin: 0 10px;
+  margin-left: 15px;
   text-decoration: none;
   font-weight: bold;
 }
 
+/* HERO */
 .hero {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  min-height: 80vh;
   text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffe0e0, #fff6c3);
+  overflow: hidden;
 }
 
-.hero h2 {
-  font-size: 48px;
-  animation: fadeIn 2s ease-in;
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
 }
 
 .hero button {
-  padding: 15px 30px;
-  font-size: 18px;
+  margin-top: 20px;
   background: #ff6f61;
-  border: none;
   color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
   cursor: pointer;
 }
 
-.floating-icons .icon {
-  position: absolute;
-  font-size: 40px;
-  animation: float 6s infinite ease-in-out;
+.hero button:hover {
+  transform: scale(1.1);
 }
 
-.floating-icons .icon:nth-child(1) { left: 10%; top: 70%; }
-.floating-icons .icon:nth-child(2) { left: 50%; top: 80%; }
-.floating-icons .icon:nth-child(3) { left: 80%; top: 65%; }
+/* FLOATING ART */
+.floating {
+  position: absolute;
+  width: 120px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.left { left: 5%; top: 20%; }
+.right { right: 5%; bottom: 20%; }
 
 @keyframes float {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-25px); }
   100% { transform: translateY(0); }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* STORY SECTION */
+.story {
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  gap: 40px;
+}
+
+.story img {
+  width: 300px;
 }
