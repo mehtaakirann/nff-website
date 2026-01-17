@@ -1,9 +1,8 @@
 from sqlalchemy import Column, Integer, String
 from database import Base
 
-
 class FilmSubmission(Base):
-    _tablename_ = "submissions"
+    __tablename__ = "submissions"
 
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, nullable=False)
@@ -11,9 +10,8 @@ class FilmSubmission(Base):
     age_group = Column(String, nullable=False)
     link = Column(String, nullable=False)
 
-
 class Registration(Base):
-    _tablename_ = "registrations"
+    __tablename__ = "registrations"
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False)
